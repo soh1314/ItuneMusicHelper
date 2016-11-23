@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0225B2B1CE4DF0D00CCFBCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B0225B2A1CE4DF0D00CCFBCA /* main.m */; };
+		B0225B2E1CE4DF0D00CCFBCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B0225B2D1CE4DF0D00CCFBCA /* AppDelegate.m */; };
+		B0225B341CE4DF0D00CCFBCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0225B321CE4DF0D00CCFBCA /* Main.storyboard */; };
+		B0225B361CE4DF0D00CCFBCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0225B351CE4DF0D00CCFBCA /* Assets.xcassets */; };
+		B0225B391CE4DF0D00CCFBCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0225B371CE4DF0D00CCFBCA /* LaunchScreen.storyboard */; };
+		B0225B421CE4DF8800CCFBCA /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0225B411CE4DF8800CCFBCA /* TableViewController.m */; };
+		B0225B451CE560D600CCFBCA /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0225B441CE560D600CCFBCA /* TableViewCell.m */; };
+		F212B7AD1DDF049000FA7557 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F212B7AC1DDF049000FA7557 /* MediaPlayer.framework */; };
+		F21753F71DE5332000E0594D /* LTAirPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = F21753F61DE5332000E0594D /* LTAirPlay.m */; };
+		F25CD8641DE2996900526500 /* LTPhoneAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = F25CD8631DE2996900526500 /* LTPhoneAuthorization.m */; };
+		F25CD8671DE29E3400526500 /* LTItunesMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F25CD8661DE29E3400526500 /* LTItunesMediaItem.m */; };
+		F25CD86A1DE2A7CB00526500 /* airPlay-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F25CD8681DE2A7CB00526500 /* airPlay-29@2x.png */; };
+		F25CD86B1DE2A7CB00526500 /* airPlay-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F25CD8691DE2A7CB00526500 /* airPlay-29@3x.png */; };
+		F25CD86D1DE2C9F600526500 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25CD86C1DE2C9F600526500 /* AVFoundation.framework */; };
+		F25CD8721DE2E9C500526500 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25CD8711DE2E9C500526500 /* CoreTelephony.framework */; };
+		F25CD8741DE2E9D000526500 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25CD8731DE2E9D000526500 /* SystemConfiguration.framework */; };
+		F25CD8771DE2F18D00526500 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F25CD8761DE2F18D00526500 /* Reachability.m */; };
+		F2631AA31DE3EB3B00C6950E /* LTItunesItemUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F2631AA21DE3EB3B00C6950E /* LTItunesItemUtil.m */; };
+		F2631B211DE434AC00C6950E /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F2631B201DE434AC00C6950E /* libiconv.tbd */; };
+		F2631B231DE434B600C6950E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F2631B221DE434B600C6950E /* libz.tbd */; };
+		F2631B251DE434C000C6950E /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F2631B241DE434C000C6950E /* libbz2.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B0225B261CE4DF0D00CCFBCA /* LTMusciPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTMusciPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0225B2A1CE4DF0D00CCFBCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B0225B2C1CE4DF0D00CCFBCA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B0225B2D1CE4DF0D00CCFBCA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B0225B331CE4DF0D00CCFBCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0225B351CE4DF0D00CCFBCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B0225B381CE4DF0D00CCFBCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B0225B3A1CE4DF0D00CCFBCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0225B401CE4DF8800CCFBCA /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		B0225B411CE4DF8800CCFBCA /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		B0225B431CE560D600CCFBCA /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		B0225B441CE560D600CCFBCA /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		F212B7AC1DDF049000FA7557 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		F21753F51DE5332000E0594D /* LTAirPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTAirPlay.h; sourceTree = "<group>"; };
+		F21753F61DE5332000E0594D /* LTAirPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTAirPlay.m; sourceTree = "<group>"; };
+		F25CD8621DE2996900526500 /* LTPhoneAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTPhoneAuthorization.h; sourceTree = "<group>"; };
+		F25CD8631DE2996900526500 /* LTPhoneAuthorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTPhoneAuthorization.m; sourceTree = "<group>"; };
+		F25CD8651DE29E3400526500 /* LTItunesMediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTItunesMediaItem.h; sourceTree = "<group>"; };
+		F25CD8661DE29E3400526500 /* LTItunesMediaItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTItunesMediaItem.m; sourceTree = "<group>"; };
+		F25CD8681DE2A7CB00526500 /* airPlay-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "airPlay-29@2x.png"; sourceTree = "<group>"; };
+		F25CD8691DE2A7CB00526500 /* airPlay-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "airPlay-29@3x.png"; sourceTree = "<group>"; };
+		F25CD86C1DE2C9F600526500 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F25CD8711DE2E9C500526500 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F25CD8731DE2E9D000526500 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F25CD8751DE2F18D00526500 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		F25CD8761DE2F18D00526500 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		F2631AA11DE3EB3B00C6950E /* LTItunesItemUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTItunesItemUtil.h; sourceTree = "<group>"; };
+		F2631AA21DE3EB3B00C6950E /* LTItunesItemUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTItunesItemUtil.m; sourceTree = "<group>"; };
+		F2631B201DE434AC00C6950E /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		F2631B221DE434B600C6950E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		F2631B241DE434C000C6950E /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0225B231CE4DF0D00CCFBCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2631B251DE434C000C6950E /* libbz2.tbd in Frameworks */,
+				F2631B231DE434B600C6950E /* libz.tbd in Frameworks */,
+				F2631B211DE434AC00C6950E /* libiconv.tbd in Frameworks */,
+				F25CD8741DE2E9D000526500 /* SystemConfiguration.framework in Frameworks */,
+				F25CD8721DE2E9C500526500 /* CoreTelephony.framework in Frameworks */,
+				F25CD86D1DE2C9F600526500 /* AVFoundation.framework in Frameworks */,
+				F212B7AD1DDF049000FA7557 /* MediaPlayer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B0225B1D1CE4DF0D00CCFBCA = {
+			isa = PBXGroup;
+			children = (
+				B0225B281CE4DF0D00CCFBCA /* LTMusicPlayer */,
+				B0225B271CE4DF0D00CCFBCA /* Products */,
+				F212B7AB1DDF049000FA7557 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B0225B271CE4DF0D00CCFBCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0225B261CE4DF0D00CCFBCA /* LTMusciPlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0225B281CE4DF0D00CCFBCA /* LTMusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				F25CD8681DE2A7CB00526500 /* airPlay-29@2x.png */,
+				F25CD8691DE2A7CB00526500 /* airPlay-29@3x.png */,
+				F25CD8751DE2F18D00526500 /* Reachability.h */,
+				F25CD8761DE2F18D00526500 /* Reachability.m */,
+				B0225B2C1CE4DF0D00CCFBCA /* AppDelegate.h */,
+				B0225B2D1CE4DF0D00CCFBCA /* AppDelegate.m */,
+				F21753F51DE5332000E0594D /* LTAirPlay.h */,
+				F21753F61DE5332000E0594D /* LTAirPlay.m */,
+				F2631AA11DE3EB3B00C6950E /* LTItunesItemUtil.h */,
+				F2631AA21DE3EB3B00C6950E /* LTItunesItemUtil.m */,
+				F25CD8621DE2996900526500 /* LTPhoneAuthorization.h */,
+				F25CD8631DE2996900526500 /* LTPhoneAuthorization.m */,
+				F25CD8651DE29E3400526500 /* LTItunesMediaItem.h */,
+				F25CD8661DE29E3400526500 /* LTItunesMediaItem.m */,
+				B0225B401CE4DF8800CCFBCA /* TableViewController.h */,
+				B0225B411CE4DF8800CCFBCA /* TableViewController.m */,
+				B0225B431CE560D600CCFBCA /* TableViewCell.h */,
+				B0225B441CE560D600CCFBCA /* TableViewCell.m */,
+				B0225B321CE4DF0D00CCFBCA /* Main.storyboard */,
+				B0225B351CE4DF0D00CCFBCA /* Assets.xcassets */,
+				B0225B371CE4DF0D00CCFBCA /* LaunchScreen.storyboard */,
+				B0225B3A1CE4DF0D00CCFBCA /* Info.plist */,
+				B0225B291CE4DF0D00CCFBCA /* Supporting Files */,
+			);
+			name = LTMusicPlayer;
+			path = YJZMusicPlayer;
+			sourceTree = "<group>";
+		};
+		B0225B291CE4DF0D00CCFBCA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0225B2A1CE4DF0D00CCFBCA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F212B7AB1DDF049000FA7557 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2631B241DE434C000C6950E /* libbz2.tbd */,
+				F2631B221DE434B600C6950E /* libz.tbd */,
+				F2631B201DE434AC00C6950E /* libiconv.tbd */,
+				F25CD8731DE2E9D000526500 /* SystemConfiguration.framework */,
+				F25CD8711DE2E9C500526500 /* CoreTelephony.framework */,
+				F25CD86C1DE2C9F600526500 /* AVFoundation.framework */,
+				F212B7AC1DDF049000FA7557 /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0225B251CE4DF0D00CCFBCA /* LTMusciPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0225B3D1CE4DF0D00CCFBCA /* Build configuration list for PBXNativeTarget "LTMusciPlayer" */;
+			buildPhases = (
+				B0225B221CE4DF0D00CCFBCA /* Sources */,
+				B0225B231CE4DF0D00CCFBCA /* Frameworks */,
+				B0225B241CE4DF0D00CCFBCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LTMusciPlayer;
+			productName = YJZMusicPlayer;
+			productReference = B0225B261CE4DF0D00CCFBCA /* LTMusciPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0225B1E1CE4DF0D00CCFBCA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "颜镜圳";
+				TargetAttributes = {
+					B0225B251CE4DF0D00CCFBCA = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 3XN37DJ4WD;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = B0225B211CE4DF0D00CCFBCA /* Build configuration list for PBXProject "LTMusciPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0225B1D1CE4DF0D00CCFBCA;
+			productRefGroup = B0225B271CE4DF0D00CCFBCA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0225B251CE4DF0D00CCFBCA /* LTMusciPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0225B241CE4DF0D00CCFBCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F25CD86A1DE2A7CB00526500 /* airPlay-29@2x.png in Resources */,
+				B0225B391CE4DF0D00CCFBCA /* LaunchScreen.storyboard in Resources */,
+				B0225B361CE4DF0D00CCFBCA /* Assets.xcassets in Resources */,
+				F25CD86B1DE2A7CB00526500 /* airPlay-29@3x.png in Resources */,
+				B0225B341CE4DF0D00CCFBCA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0225B221CE4DF0D00CCFBCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2631AA31DE3EB3B00C6950E /* LTItunesItemUtil.m in Sources */,
+				F21753F71DE5332000E0594D /* LTAirPlay.m in Sources */,
+				B0225B2E1CE4DF0D00CCFBCA /* AppDelegate.m in Sources */,
+				F25CD8671DE29E3400526500 /* LTItunesMediaItem.m in Sources */,
+				B0225B451CE560D600CCFBCA /* TableViewCell.m in Sources */,
+				F25CD8771DE2F18D00526500 /* Reachability.m in Sources */,
+				B0225B421CE4DF8800CCFBCA /* TableViewController.m in Sources */,
+				F25CD8641DE2996900526500 /* LTPhoneAuthorization.m in Sources */,
+				B0225B2B1CE4DF0D00CCFBCA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B0225B321CE4DF0D00CCFBCA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0225B331CE4DF0D00CCFBCA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B0225B371CE4DF0D00CCFBCA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0225B381CE4DF0D00CCFBCA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B0225B3B1CE4DF0D00CCFBCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B0225B3C1CE4DF0D00CCFBCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0225B3E1CE4DF0D00CCFBCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3XN37DJ4WD;
+				INFOPLIST_FILE = YJZMusicPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YJZMusicPlayer/KxMovie",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leting.music;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B0225B3F1CE4DF0D00CCFBCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3XN37DJ4WD;
+				INFOPLIST_FILE = YJZMusicPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YJZMusicPlayer/KxMovie",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leting.music;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0225B211CE4DF0D00CCFBCA /* Build configuration list for PBXProject "LTMusciPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0225B3B1CE4DF0D00CCFBCA /* Debug */,
+				B0225B3C1CE4DF0D00CCFBCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0225B3D1CE4DF0D00CCFBCA /* Build configuration list for PBXNativeTarget "LTMusciPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0225B3E1CE4DF0D00CCFBCA /* Debug */,
+				B0225B3F1CE4DF0D00CCFBCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0225B1E1CE4DF0D00CCFBCA /* Project object */;
+}
