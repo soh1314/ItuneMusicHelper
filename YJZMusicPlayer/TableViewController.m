@@ -6,7 +6,7 @@
 #import "LTPhoneAuthorization.h"
 #import "TableViewCell.h"
 #import "Reachability.h"
-#import "LTItunesItemUtil.h"
+#import "LTMusicConvertor.h"
 #define IPODMUSICURL @"ipod-library://item/item.mp3?id="
 @interface TableViewController ()<MPPlayableContentDataSource>
 {
@@ -212,11 +212,10 @@
             NSLog(@"%@--%@%@",item.title,item.assetURL,[item valueForProperty:MPMediaItemPropertyPodcastPersistentID]);
             if ([[item valueForProperty:MPMediaItemPropertyHasProtectedAsset] integerValue]== 0) {
                 NSURL *assetURL = [item valueForProperty:MPMediaItemPropertyAssetURL];
-//                NSString *path = [LTItunesItemUtil m4aFormatefilePathForSongName:[item valueForProperty:MPMediaItemPropertyTitle]];
-//                [LTItunesItemUtil convetM4aToWav:assetURL  destUrl:[NSURL fileURLWithPath:path]];
-////                [LTItunesItemUtil convertToMp3:item];
-//                break;
-                
+                NSString *path = [LTMusicConvertor wavFormatefilePathForSongName:[item valueForProperty:MPMediaItemPropertyTitle]];
+                [LTMusicConvertor convetItuneMusicToWavFormate:assetURL destUrl:[NSURL fileURLWithPath:path]];
+//                [LTMusicConvertor convertToMp4:item];
+                break;
             }
         }
         
@@ -284,11 +283,14 @@
 //            [self.musicPlayerController pause];
 //        }
 //    }
-
-    [self.musicPlayerController setNowPlayingItem:self.musicArray[indexPath.row]];
-    [self.musicPlayerController play]; //播放
-    self.musicPlaybackState = MPMusicPlaybackStatePlaying;
-     NSLog(@"%@",self.session.currentRoute.outputs);
+    MPMediaItem * item = self.musicArray[0];
+    
+    AVAudioPlayer * player = [[AVAudioPlayer alloc]initWithContentsOfURL:[LTMusicConvertor wavFormatefilePathForSongName:item.title] error:nil];
+    [player play];
+//    [self.musicPlayerController setNowPlayingItem:self.musicArray[indexPath.row]];
+//    [self.musicPlayerController play]; //播放
+//    self.musicPlaybackState = MPMusicPlaybackStatePlaying;
+//     NSLog(@"%@",self.session.currentRoute.outputs);
 
 }
 

@@ -16,6 +16,7 @@
 		B0225B451CE560D600CCFBCA /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0225B441CE560D600CCFBCA /* TableViewCell.m */; };
 		F212B7AD1DDF049000FA7557 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F212B7AC1DDF049000FA7557 /* MediaPlayer.framework */; };
 		F21753F71DE5332000E0594D /* LTAirPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = F21753F61DE5332000E0594D /* LTAirPlay.m */; };
+		F24606151DE6B08D00720926 /* lame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F24606141DE6B08D00720926 /* lame.framework */; };
 		F25CD8641DE2996900526500 /* LTPhoneAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = F25CD8631DE2996900526500 /* LTPhoneAuthorization.m */; };
 		F25CD8671DE29E3400526500 /* LTItunesMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F25CD8661DE29E3400526500 /* LTItunesMediaItem.m */; };
 		F25CD86A1DE2A7CB00526500 /* airPlay-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F25CD8681DE2A7CB00526500 /* airPlay-29@2x.png */; };
@@ -24,7 +25,7 @@
 		F25CD8721DE2E9C500526500 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25CD8711DE2E9C500526500 /* CoreTelephony.framework */; };
 		F25CD8741DE2E9D000526500 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25CD8731DE2E9D000526500 /* SystemConfiguration.framework */; };
 		F25CD8771DE2F18D00526500 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F25CD8761DE2F18D00526500 /* Reachability.m */; };
-		F2631AA31DE3EB3B00C6950E /* LTItunesItemUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F2631AA21DE3EB3B00C6950E /* LTItunesItemUtil.m */; };
+		F2631AA31DE3EB3B00C6950E /* LTMusicConvertor.m in Sources */ = {isa = PBXBuildFile; fileRef = F2631AA21DE3EB3B00C6950E /* LTMusicConvertor.m */; };
 		F2631B211DE434AC00C6950E /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F2631B201DE434AC00C6950E /* libiconv.tbd */; };
 		F2631B231DE434B600C6950E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F2631B221DE434B600C6950E /* libz.tbd */; };
 		F2631B251DE434C000C6950E /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F2631B241DE434C000C6950E /* libbz2.tbd */; };
@@ -46,6 +47,7 @@
 		F212B7AC1DDF049000FA7557 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		F21753F51DE5332000E0594D /* LTAirPlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTAirPlay.h; sourceTree = "<group>"; };
 		F21753F61DE5332000E0594D /* LTAirPlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTAirPlay.m; sourceTree = "<group>"; };
+		F24606141DE6B08D00720926 /* lame.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = lame.framework; sourceTree = "<group>"; };
 		F25CD8621DE2996900526500 /* LTPhoneAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTPhoneAuthorization.h; sourceTree = "<group>"; };
 		F25CD8631DE2996900526500 /* LTPhoneAuthorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTPhoneAuthorization.m; sourceTree = "<group>"; };
 		F25CD8651DE29E3400526500 /* LTItunesMediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTItunesMediaItem.h; sourceTree = "<group>"; };
@@ -57,8 +59,8 @@
 		F25CD8731DE2E9D000526500 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F25CD8751DE2F18D00526500 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		F25CD8761DE2F18D00526500 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		F2631AA11DE3EB3B00C6950E /* LTItunesItemUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTItunesItemUtil.h; sourceTree = "<group>"; };
-		F2631AA21DE3EB3B00C6950E /* LTItunesItemUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTItunesItemUtil.m; sourceTree = "<group>"; };
+		F2631AA11DE3EB3B00C6950E /* LTMusicConvertor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMusicConvertor.h; sourceTree = "<group>"; };
+		F2631AA21DE3EB3B00C6950E /* LTMusicConvertor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTMusicConvertor.m; sourceTree = "<group>"; };
 		F2631B201DE434AC00C6950E /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		F2631B221DE434B600C6950E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		F2631B241DE434C000C6950E /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
@@ -70,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2631B251DE434C000C6950E /* libbz2.tbd in Frameworks */,
+				F24606151DE6B08D00720926 /* lame.framework in Frameworks */,
 				F2631B231DE434B600C6950E /* libz.tbd in Frameworks */,
 				F2631B211DE434AC00C6950E /* libiconv.tbd in Frameworks */,
 				F25CD8741DE2E9D000526500 /* SystemConfiguration.framework in Frameworks */,
@@ -102,6 +105,7 @@
 		B0225B281CE4DF0D00CCFBCA /* LTMusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				F24606141DE6B08D00720926 /* lame.framework */,
 				F25CD8681DE2A7CB00526500 /* airPlay-29@2x.png */,
 				F25CD8691DE2A7CB00526500 /* airPlay-29@3x.png */,
 				F25CD8751DE2F18D00526500 /* Reachability.h */,
@@ -110,8 +114,8 @@
 				B0225B2D1CE4DF0D00CCFBCA /* AppDelegate.m */,
 				F21753F51DE5332000E0594D /* LTAirPlay.h */,
 				F21753F61DE5332000E0594D /* LTAirPlay.m */,
-				F2631AA11DE3EB3B00C6950E /* LTItunesItemUtil.h */,
-				F2631AA21DE3EB3B00C6950E /* LTItunesItemUtil.m */,
+				F2631AA11DE3EB3B00C6950E /* LTMusicConvertor.h */,
+				F2631AA21DE3EB3B00C6950E /* LTMusicConvertor.m */,
 				F25CD8621DE2996900526500 /* LTPhoneAuthorization.h */,
 				F25CD8631DE2996900526500 /* LTPhoneAuthorization.m */,
 				F25CD8651DE29E3400526500 /* LTItunesMediaItem.h */,
@@ -230,7 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2631AA31DE3EB3B00C6950E /* LTItunesItemUtil.m in Sources */,
+				F2631AA31DE3EB3B00C6950E /* LTMusicConvertor.m in Sources */,
 				F21753F71DE5332000E0594D /* LTAirPlay.m in Sources */,
 				B0225B2E1CE4DF0D00CCFBCA /* AppDelegate.m in Sources */,
 				F25CD8671DE29E3400526500 /* LTItunesMediaItem.m in Sources */,
@@ -351,6 +355,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3XN37DJ4WD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YJZMusicPlayer/mp3lame-for-iOS",
+					"$(PROJECT_DIR)/YJZMusicPlayer",
+				);
 				INFOPLIST_FILE = YJZMusicPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -367,6 +376,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 3XN37DJ4WD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YJZMusicPlayer/mp3lame-for-iOS",
+					"$(PROJECT_DIR)/YJZMusicPlayer",
+				);
 				INFOPLIST_FILE = YJZMusicPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
