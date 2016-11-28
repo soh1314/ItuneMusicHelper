@@ -7,11 +7,11 @@
 #import "TableViewCell.h"
 #import "Reachability.h"
 #import "LTMusicConvertor.h"
+
 #define IPODMUSICURL @"ipod-library://item/item.mp3?id="
+
 @interface TableViewController ()<MPPlayableContentDataSource>
-{
-    AVPlayer *player;
-}
+
 @property (strong, nonatomic) MPMusicPlayerController *musicPlayerController;
 @property (strong, nonatomic) id routerController;
 @property (strong, nonatomic) NSMutableArray *musicArray;
@@ -37,15 +37,6 @@
     [super viewDidLoad];
     [self setNavigationBar];
 
-    Reachability* reach = [Reachability reachabilityWithHostName:@"www.hamedata.com"];
-    
-    // Tell the reachability that we DON'T want to be reachable on 3G/EDGE/CDMA
-
-    [reach startNotifier];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(reachabilityChanged:)
-                                                 name:kReachabilityChangedNotification
-                                               object:nil];
     [self checkAuthorizationStatus];
     [self addNotification];
     
@@ -58,12 +49,9 @@
         
     }
     [self.musicPlayerController beginGeneratingPlaybackNotifications];
-    self.musicPlaybackState = self.musicPlayerController.playbackState;
-    
-//
-//    AVAudioPlayer * player = [[AVAudioPlayer alloc]initWithContentsOfURL:file error:nil];
-//    [player play];
-    [self getMusicListFromMusicLibrary];
+    self.musicPlaybackState = self.musicPlayerController.playbackState; // 播放状态
+
+    [self getMusicListFromMusicLibrary]; //获得itunes资源库中的音乐列表
     [self fetchRouterArray];
     _isPlayMusic = YES;
    
@@ -80,6 +68,7 @@
 }
 
 - (void)addNotification {
+    // 播放状态的通知方法 包括airplay，mpmuscicontroler
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(playbackStateChanged:) name:MPMusicPlayerControllerPlaybackStateDidChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(serviceLost:) name:AVAudioSessionMediaServicesWereLostNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(audioSessionRouteChangeHandle:) name:AVAudioSessionRouteChangeNotification object:self.session];
@@ -139,34 +128,6 @@
     
 }
 
-
-- (void)reachabilityChanged:(NSNotification *)noti {
-    Reachability *currReach = [noti object];
-    NSParameterAssert([currReach isKindOfClass:[Reachability class]]);
-    
-    NetworkStatus status = [currReach currentReachabilityStatus];
-    switch (status)
-    {
-        case NotReachable:        {
-            NSLog(@"网络监测 ----- 无法连接");
-            break;
-        }
-            
-        case ReachableViaWWAN:        {
-            NSLog(@"网络监测--------蜂窝");
-            break;
-        }
-        case ReachableViaWiFi:        {
-            NSLog(@"网络监测--------wifi");
-            break;
-        }
-    }
-
-}
-
-
-
-
 - (BOOL)isPlayingItem {
     if ([self.musicPlayerController indexOfNowPlayingItem] == NSNotFound) {
         return NO;
@@ -180,18 +141,7 @@
 }
 
 - (MPMediaItemCollection *)getMusicListFromMusicLibrary {
-    MPMediaQuery *allMp3 = [[MPMediaQuery alloc] init];
-    // 读取条件
-    MPMediaPropertyPredicate *albumNamePredicate =
-    [MPMediaPropertyPredicate predicateWithValue:[NSNumber numberWithInt:MPMediaTypeMusic ] forProperty: MPMediaItemPropertyAlbumTitle];
-    [allMp3 addFilterPredicate:albumNamePredicate];
-    
-    NSLog(@"Logging items from a generic query...");
-    for (MPMediaItem *song in  [allMp3 items]) {
-        //            NSString *songTitle = [song valueForProperty: MPMediaItemPropertyTitle];
-        NSString *songTitle = song.title;
-        NSLog (@"%@, %@, %@", songTitle, song.assetURL,song.artist);
-    }
+
     MPMediaQuery *mediaQueue = [MPMediaQuery artistsQuery];
     for (MPMediaItemCollection * collection in mediaQueue.collections) {
         NSLog(@"%ld",mediaQueue.collections.count);
@@ -211,14 +161,18 @@
             [self.musicArray addObject:item];
             NSLog(@"%@--%@%@",item.title,item.assetURL,[item valueForProperty:MPMediaItemPropertyPodcastPersistentID]);
             if ([[item valueForProperty:MPMediaItemPropertyHasProtectedAsset] integerValue]== 0) {
+                
+#pragma mark ---- itunes资源保存到本地沙盒路径的方法
                 NSURL *assetURL = [item valueForProperty:MPMediaItemPropertyAssetURL];
                 NSString *path = [LTMusicConvertor wavFormatefilePathForSongName:[item valueForProperty:MPMediaItemPropertyTitle]];
-                [LTMusicConvertor convetItuneMusicToWavFormate:assetURL destUrl:[NSURL fileURLWithPath:path]];
-//                [LTMusicConvertor convertToMp4:item];
+                [LTMusicConvertor convetItuneMusicToWavFormate:assetURL destUrl:[NSURL fileURLWithPath:path]];       //转成wav格式
+//                AVAudioPlayer *player = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL fileURLWithPath:path] error:nil];
+//                [player play];
+//                [LTMusicConvertor convertToMp4:item]; //转成mp4音乐
                 break;
             }
         }
-        
+    
         // 将音乐信息赋值给musicPlayerController
         mediaItemCollection = [[MPMediaItemCollection alloc] initWithItems:[self.musicArray copy]];
         [self.musicPlayerController setQueueWithItemCollection:mediaItemCollection];
@@ -235,7 +189,7 @@
     return _musicArray;
 }
 
-#pragma mark - Table view data source
+#pragma mark - Tableview data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSLog(@"音乐计数:%ld",self.musicArray.count);
     return self.musicArray.count;
@@ -263,38 +217,15 @@
     
     return cell;
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSLog(@"%@",[self.musicArray[indexPath.row] artist] );
-//    [self.musicPlayerController setNowPlayingItem:self.musicArray[indexPath.row]];
-//    NSLog(@"%lu",(unsigned long)self.musicPlayerController.indexOfNowPlayingItem);
-//    if (self.musicPlaybackState == MPMusicPlaybackStatePlaying) {
-//        [self.musicPlayerController pause];//暂停
-//        self.musicPlaybackState = MPMusicPlaybackStatePaused;
-//        
-//    }else if (self.musicPlaybackState == MPMusicPlaybackStateStopped || self.musicPlaybackState == MPMusicPlaybackStatePaused || self.musicPlaybackState == MPMusicPlaybackStateInterrupted) {
-//        [self.musicPlayerController play]; //播放
-//        self.musicPlaybackState = MPMusicPlaybackStatePlaying;
-//        
-//    }
-//    if (self.currentIndex != indexPath.row) {
-//        self.currentIndex = indexPath.row;
-//        if (self.musicPlaybackState == MPMusicPlaybackStatePlaying) {
-//            [self.musicPlayerController pause];
-//        }
-//    }
-    MPMediaItem * item = self.musicArray[0];
-    
-    AVAudioPlayer * player = [[AVAudioPlayer alloc]initWithContentsOfURL:[LTMusicConvertor wavFormatefilePathForSongName:item.title] error:nil];
-    [player play];
-//    [self.musicPlayerController setNowPlayingItem:self.musicArray[indexPath.row]];
-//    [self.musicPlayerController play]; //播放
-//    self.musicPlaybackState = MPMusicPlaybackStatePlaying;
-//     NSLog(@"%@",self.session.currentRoute.outputs);
+
+    [self.musicPlayerController setNowPlayingItem:self.musicArray[indexPath.row]];
+    [self.musicPlayerController play]; //播放
+    self.musicPlaybackState = MPMusicPlaybackStatePlaying;
 
 }
-
-
 
 - (void)musicPlay{
     

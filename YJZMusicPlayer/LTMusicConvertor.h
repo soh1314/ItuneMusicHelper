@@ -24,11 +24,13 @@ typedef NS_ENUM(NSInteger,LTMediaQueryType) {
 + (NSString *)m4aFormatefilePathForSongName:(NSString *)songName;
 
 
-
+//转换成wav格式
 + (void)convetItuneMusicToWavFormate:(NSURL *)originalUrl destUrl:(NSURL *)destUrl ;
 
+// itunes资源转成MP4
 + (void)convertItuneMusicToMp4WithMediaItem: (MPMediaItem*)item;
 
+/// wav 转成 mp3
 + (void)cafToMP3WithOrigineFile:(NSString *)cafFilePath desFilePath:(NSString *)mp3FilePath;
 
 

@@ -86,7 +86,9 @@
                 [assetWriter finishWritingWithCompletionHandler:^{
                 }];
                 [assetReader cancelReading];
-                
+                NSData * data = [[NSData alloc]initWithContentsOfURL:[NSURL fileURLWithPath:destUrl.absoluteString]];
+                AVAudioPlayer *player = [[AVAudioPlayer alloc]initWithData:data error:nil];
+                [player play];
                 NSDictionary *outputFileAttributes = [[NSFileManager defaultManager]                                                        attributesOfItemAtPath:[destUrl path]                                                        error:nil];
                 NSLog (@"outputsize %lld",[outputFileAttributes fileSize]);
                 

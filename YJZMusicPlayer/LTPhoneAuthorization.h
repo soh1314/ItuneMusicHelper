@@ -1,11 +1,4 @@
-//
-//  LTPhoneAuthorization.h
-//  YJZMusicPlayer
-//
-//  Created by ios_dev100 on 16/11/21.
 
-
-// before set itunes authorization ,please set info key Privacy - Media Library Usage Description;
 
 #import <Foundation/Foundation.h>
 
